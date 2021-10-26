@@ -20,6 +20,7 @@
   "homepage": "https://github.com/LubenSirakov/video-tutorials-exam-prep#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
     "mongoose": "^6.0.12"
   },
   "devDependencies": {
