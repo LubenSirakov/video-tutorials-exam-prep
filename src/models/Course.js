@@ -16,15 +16,26 @@ let courseSchema = new mongoose.Schema({
     isPublic: {
         type: Boolean,
         default: false,
+        //todo: fix it to work wit true only
     },
     createdAt: {
         type: Date,
         required: true,
+        default: Date.now,
     },
-    // usersEnrolled: {
-
-    // }
+    usersEnrolled: [
+        {
+            type: mongoose.Types.ObjectId,
+            ref: 'User',
+        }
+    ],
+    creator: {
+        type: mongoose.Types.ObjectId,
+        ref: 'User'
+    }
 });
+
+// courseSchema.method()
 
 let Course = mongoose.model('Course', courseSchema);
 
